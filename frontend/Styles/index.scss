@@ -1,4 +1,4 @@
-$primary-color: #352208;
+$primary-color: #3B1D0B;
 $secondary-color: #e1bb80;
 $tertiary-color: #7b6b43;
 $text-color: #dee9f7;
@@ -31,16 +31,16 @@ h1 {
     font-family: "MV Boli";
 }
 .container-fluid {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background: $secondary-color;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: $secondary-color;
   }
   
-  .header-container {
-    width: 100%;
-    @include flex-center;
-  }
+.header-container {
+  width: 100%;
+  @include flex-center;
+}
   
   .nav {
     display: flex;
@@ -84,7 +84,7 @@ h1 {
   .teddy-bear {
     max-width: 700px;
     &__bg {
-      background-image: url("/front-end/src/img/teddy-bear-wallpaper.jpg");
+      background-image: url("/frontend/img/teddy-bear-wallpaper.jpg");
       background-size: cover;
       height: 50vh;
       @include flex-center;

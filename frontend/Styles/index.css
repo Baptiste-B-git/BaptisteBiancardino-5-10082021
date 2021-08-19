@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #352208;
+  color: #3B1D0B;
 }
 
 h1 {
@@ -59,18 +59,18 @@ h1 {
 }
 
 .nav__logo {
-  color: #352208;
+  color: #3B1D0B;
   font-size: 27px;
 }
 
 .nav__cart {
   position: relative;
-  color: #352208;
+  color: #3B1D0B;
   font-size: 30px;
 }
 
 .nav__cart:hover a {
-  color: #613e0f;
+  color: #663213;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -106,7 +106,7 @@ h1 {
 }
 
 .teddy-bear__bg {
-  background-image: url("/front-end/src/img/teddy-bear-wallpaper.jpg");
+  background-image: url("/frontend/img/teddy-bear-wallpaper.jpg");
   background-size: cover;
   height: 50vh;
   display: -webkit-box;
@@ -251,7 +251,7 @@ main .products-container .products .product__infos {
   height: 20%;
   width: 100%;
   padding: 0 20px;
-  background: #613e0f;
+  background: #663213;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -262,7 +262,7 @@ main .products-container .products .product__infos {
 }
 
 footer {
-  background: #352208;
+  background: #3B1D0B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
