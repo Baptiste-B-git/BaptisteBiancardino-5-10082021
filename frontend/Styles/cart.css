@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #3B1D0B;
+  color: #352208;
 }
 
 h1 {
@@ -58,18 +58,18 @@ h1 {
 }
 
 .nav__logo {
-  color: #3B1D0B;
+  color: #352208;
   font-size: 30px;
 }
 
 .nav__cart {
   position: relative;
-  color: #3B1D0B;
+  color: #352208;
   font-size: 30px;
 }
 
 .nav__cart:hover a {
-  color: #663213;
+  color: #613e0f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -199,7 +199,7 @@ h1 {
   width: 130px;
   padding: 20px;
   border-radius: 5px;
-  border: solid 1px #3B1D0B;
+  border: solid 1px #352208;
 }
 
 .container .cart-card__form {
@@ -217,7 +217,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #3B1D0B;
+  color: #352208;
   height: 100%;
 }
 
@@ -315,7 +315,7 @@ h1 {
   padding: 20px;
   background: #e1bb80;
   border-radius: 5px;
-  border: solid 1px #3B1D0B;
+  border: solid 1px #352208;
 }
 
 .container .cart-card__form .erreur {
@@ -440,7 +440,7 @@ h1 {
 }
 
 footer {
-  background: #3B1D0B;
+  background: #352208;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

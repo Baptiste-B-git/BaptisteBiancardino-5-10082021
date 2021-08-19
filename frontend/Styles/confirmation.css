@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #3B1D0B;
+  color: #352208;
 }
 
 h1 {
@@ -59,18 +59,18 @@ h1 {
 }
 
 .nav__logo {
-  color: #3B1D0B;
+  color: #352208;
   font-size: 30px;
 }
 
 .nav__cart {
   position: relative;
-  color: #3B1D0B;
+  color: #352208;
   font-size: 30px;
 }
 
 .nav__cart:hover a {
-  color: #663213;
+  color: #613e0f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -146,7 +146,7 @@ h1 {
 }
 
 footer {
-  background: #3B1D0B;
+  background: #352208;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
