@@ -24,7 +24,7 @@ $text-color: #dee9f7;
 
 
 //contact et panier
-.links, .cart{
+.links, .cart-header{
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -225,8 +225,6 @@ h1 {
         font-size: 22px;
         &:hover{
           color: $secondary-color;
-          transform: scale(1.08, 1.08);
-          transition: 0.3s ease;
         }
       }
     }
@@ -254,7 +252,6 @@ border-radius: 15px;
 
 
   // Responsive
-  
   @media screen and (max-width: 1100px) {
     main {
       .products-container {
