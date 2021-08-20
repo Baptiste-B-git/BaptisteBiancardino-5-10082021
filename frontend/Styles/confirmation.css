@@ -21,8 +21,8 @@
   margin-right: 10px;
   padding: 10px;
   text-decoration: none;
-  color: #352208;
-  border: 2px solid #352208;
+  color: #3B1D0B;
+  border: 2px solid #3B1D0B;
   border-radius: 10px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -32,7 +32,7 @@
 
 .links:hover, .cart-header:hover {
   color: #e1bb80;
-  background-color: #352208;
+  background-color: #3B1D0B;
 }
 
 .fa-shopping-cart {
@@ -59,7 +59,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #352208;
+  color: #3B1D0B;
 }
 
 h1 {
@@ -104,18 +104,18 @@ h1 {
 }
 
 .nav__logo {
-  color: #352208;
+  color: #3B1D0B;
   font-size: 40px;
 }
 
 .nav__cart {
   position: relative;
-  color: #352208;
+  color: #3B1D0B;
   font-size: 30px;
 }
 
 .nav__cart:hover a {
-  color: #613e0f;
+  color: #663213;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -191,7 +191,7 @@ h1 {
 }
 
 footer {
-  background: #352208;
+  background: #3B1D0B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,7 +239,7 @@ footer .nav__link:hover {
   display: inline-block;
   text-align: center;
   padding: 10px;
-  color: #352208;
+  color: #3B1D0B;
 }
 
 .fab, .far {

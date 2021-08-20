@@ -1,4 +1,4 @@
-$primary-color: #352208;
+$primary-color: #3B1D0B;
 $secondary-color: #e1bb80;
 $tertiary-color: #7b6b43;
 $text-color: #dee9f7;
@@ -122,7 +122,6 @@ h1 {
 .container {
   @include flex-center;
   width: 100%;
-  background: $tertiary-color;
   .cart-card {
     overflow: hidden;
     margin: 50px 15px;
@@ -171,7 +170,7 @@ h1 {
         margin: 5px 0;
         width: 130px;
         padding: 20px;
-        border-radius: 5px;
+        border-radius: 20px;
         border: solid 1px $primary-color;
       }
     }
@@ -239,7 +238,7 @@ h1 {
       .cart-card__form__button {
         padding: 20px;
         background: $secondary-color;
-        border-radius: 5px;
+        border-radius: 20px;
         border: solid 1px $primary-color;
       }
 
