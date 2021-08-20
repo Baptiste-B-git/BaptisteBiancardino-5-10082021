@@ -16,8 +16,13 @@ $text-color: #dee9f7;
   padding: 0;
 }
 
+@font-face{
+  font-family: 'arlrdbd';
+  src: url('../fonts/arlrdbd.ttf');
+}
+
 body {
-  font-family: "Josefin sans";
+  font-family: "arlrdbd";
   margin: 0;
   padding: 0;
 }
@@ -48,9 +53,10 @@ h1 {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+
   &__logo {
     color: $primary-color;
-    font-size: 30px;
+    font-size: 40px;
   }
   &__cart {
     position: relative;
@@ -212,7 +218,7 @@ h1 {
       }
 
       .to-pay {
-        font-family: Josefin Sans;
+        font-family: arlrdbd;
         font-size: 18px;
         margin-bottom: 20px;
         @include flex-center;

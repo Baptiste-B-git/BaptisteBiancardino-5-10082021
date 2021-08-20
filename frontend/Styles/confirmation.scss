@@ -15,9 +15,13 @@ $text-color: #dee9f7;
   margin: 0;
   padding: 0;
 }
+@font-face{
+  font-family: 'arlrdbd';
+  src: url('../fonts/arlrdbd.ttf');
+}
 
 body {
-  font-family: "Josefin sans";
+  font-family: "arlrdbd";
   margin: 0;
   padding: 0;
   max-height: 100vh;
