@@ -313,8 +313,9 @@ h1 {
     }
   }
 
-
 footer {
+  position: absolute;
+  bottom: 0;
   background: $primary-color;
   @include flex-center;
   width: 100%;

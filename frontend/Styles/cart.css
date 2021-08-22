@@ -500,6 +500,8 @@ h1 {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
   background: #3B1D0B;
   display: -webkit-box;
   display: -ms-flexbox;
