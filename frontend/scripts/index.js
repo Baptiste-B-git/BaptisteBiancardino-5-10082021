@@ -11,9 +11,9 @@ function getArticles() {
       return res.json();
     })
     .catch((error) => {
-      let productsContainer = document.querySelector(".products-container");
+      var productsContainer = document.querySelector(".products-container");
       productsContainer.innerHTML =
-        "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+        "Veuillez lancer le serveur local Port 3000";
       productsContainer.style.textAlign = "center";
       productsContainer.style.padding = "30vh 0";
     })
@@ -53,7 +53,7 @@ function getArticles() {
         productInfosDiv.appendChild(productInfoPrice);
         productInfoPrice.classList.add("product__infos__price");
 
-        // Formatage du prix pour l'afficher en euros
+        /*Prix en euros*/
         resultatAPI[article].price = resultatAPI[article].price / 100;
         productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
           style: "currency",

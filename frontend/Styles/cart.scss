@@ -1,12 +1,10 @@
 $primary-color: #3B1D0B;
-$secondary-color: #e1bb80;
-$tertiary-color: #7b6b43;
-$text-color: #dee9f7;
+$secondary-color: #F0C37F;
+$text-color: #FFFFFF;
 
 @mixin flex-center() {
   display: flex;
   justify-content: center;
-  align-self: center;
 }
 
 *,
@@ -20,8 +18,12 @@ $text-color: #dee9f7;
   font-family: 'arlrdbd';
   src: url('../fonts/arlrdbd.ttf');
 }
+@font-face{
+  font-family: 'bauhaus-93';
+  src: url('../fonts/bauhaus-93.ttf');
+}
 
-//contact et panier
+/*contact et panier*/
 .links, .cart-header{
   display: flex;
   align-items: center;
@@ -49,7 +51,7 @@ $text-color: #dee9f7;
 .link {
   display: flex;
 }
-//contact et panier
+/*contact et panier*/
 
 body {
   font-family: "arlrdbd";
@@ -57,16 +59,15 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-family: "bauhaus-93";
+}
+
 a {
   text-decoration: none;
   color: $primary-color;
 }
-
-h1 {
-  font-family: "MV Boli";
-}
-
-.container-fluid {
+.container-top {
   display: flex;
   align-items: center;
   width: 100%;
@@ -105,7 +106,6 @@ h1 {
       position: absolute;
       padding: 5px 5px;
       height: 14px;
-      background-color: $tertiary-color;
       color: $text-color;
       top: -15px;
       right: -15px;
@@ -303,15 +303,15 @@ h1 {
   justify-content: center;
   align-items: flex-end;
   .to-empty-cart {
-    @include flex-center;
+  @include flex-center;
     &:hover {
       cursor: pointer;
-        transform: scale(1.15, 1.15);
-        transition: 0.3s ease;
-        box-shadow:  0px 0px 10px 0px $primary-color;
-      }
-    }
+      transform: scale(1.15, 1.15);
+      transition: 0.3s ease;
+      box-shadow:  0px 0px 10px 0px $primary-color;
   }
+  }
+}
 
 footer {
   position: absolute;

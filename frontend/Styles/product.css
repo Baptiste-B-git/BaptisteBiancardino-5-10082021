@@ -11,6 +11,11 @@
   src: url("../fonts/arlrdbd.ttf");
 }
 
+@font-face {
+  font-family: 'bauhaus-93';
+  src: url("../fonts/bauhaus-93.ttf");
+}
+
 .links, .cart-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,7 +36,7 @@
 }
 
 .links:hover, .cart-header:hover {
-  color: #e1bb80;
+  color: #F0C37F;
   background-color: #3B1D0B;
 }
 
@@ -62,10 +67,10 @@ a {
 }
 
 h1 {
-  font-family: "MV Boli";
+  font-family: "bauhaus-93";
 }
 
-.container-fluid {
+.container-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +78,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background: #e1bb80;
+  background: #F0C37F;
 }
 
 .header-container {
@@ -84,8 +89,6 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
   height: 130px;
 }
 
@@ -133,8 +136,7 @@ h1 {
   position: absolute;
   padding: 5px 5px;
   height: 14px;
-  background-color: #7b6b43;
-  color: #dee9f7;
+  color: #FFFFFF;
   top: -15px;
   right: -15px;
   border-radius: 200px;
@@ -153,8 +155,6 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
 }
 
 .container .product-card {
@@ -192,7 +192,7 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #e1bb80;
+  background-color: #F0C37F;
   padding: 20px;
   border-radius: 15px;
   font-weight: bold;
@@ -200,7 +200,7 @@ h1 {
 }
 
 .container .product-card__infos__title {
-  font-family: "MV Boli";
+  font-family: "bauhaus-93";
   font-size: 32px;
 }
 
@@ -244,7 +244,7 @@ h1 {
 
 .container .product-card__infos .product-card__infos__button {
   padding: 20px;
-  background: #e1bb80;
+  background: #F0C37F;
   border-radius: 20px;
   border: solid 1px #3B1D0B;
 }
@@ -318,15 +318,13 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
   width: 100%;
   height: 100px;
 }
 
 footer .nav {
   max-width: 1700px;
-  color: #dee9f7;
+  color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,12 +336,12 @@ footer .nav {
 }
 
 footer .nav__link {
-  color: #dee9f7;
+  color: #FFFFFF;
   font-size: 24px;
 }
 
 footer .nav__link:hover {
-  color: #e1bb80;
+  color: #F0C37F;
 }
 
 .res-sociaux {
@@ -352,7 +350,7 @@ footer .nav__link:hover {
 }
 
 .res-sociaux:hover {
-  background: #e1bb80;
+  background: #F0C37F;
 }
 
 .res-sociaux a {

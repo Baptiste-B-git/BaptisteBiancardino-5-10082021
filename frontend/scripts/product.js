@@ -99,7 +99,7 @@ function addToCart() {
 
       // Effets visuels lors d'un ajout au panier
       confirmation.style.visibility = "visible";
-      textConfirmation.innerHTML = `Vous avez ajouté ${bearNumber.value} nounours à votre panier !`;
+      textConfirmation.innerHTML = `Article ajouté !`;
       setTimeout("location.reload(true);", 4000);
     } else {
       confirmation.style.visibility = "visible";
