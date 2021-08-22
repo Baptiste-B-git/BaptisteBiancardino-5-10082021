@@ -163,7 +163,7 @@ h1 {
   margin: 50px 15px;
   display: none;
   width: 600px;
-  background: #dee9f7;
+  background: #e1bb80;
   border-radius: 20px 20px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
           box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
@@ -171,12 +171,14 @@ h1 {
 
 .container .cart-card .cart {
   margin-left: 10px;
+  text-align: center;
+  color: #3B1D0B;
 }
 
 .container .cart-card__recap {
   margin: 10px 0 10px 10px;
-  width: 90%;
-  background: #dee9f7;
+  width: 100%;
+  background: #e1bb80;
 }
 
 .container .cart-card__recap__row {
@@ -362,6 +364,15 @@ h1 {
   border: solid 1px #3B1D0B;
 }
 
+.container .cart-card__form .cart-card__form__button:hover {
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0px 0px 10px 0px #3B1D0B;
+          box-shadow: 0px 0px 10px 0px #3B1D0B;
+}
+
 .container .cart-card__form .erreur {
   padding: 5px 0;
   color: red;
@@ -383,7 +394,6 @@ h1 {
 
 .container .cart-card__form .to-pay:hover {
   cursor: pointer;
-  opacity: 0.8;
 }
 
 .container .if-empty-cart {
@@ -408,7 +418,8 @@ h1 {
 }
 
 .container .total {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .title-quantity {
@@ -480,7 +491,12 @@ h1 {
 
 .width-to-empty-cart .to-empty-cart:hover {
   cursor: pointer;
-  opacity: 0.8;
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0px 0px 10px 0px #3B1D0B;
+          box-shadow: 0px 0px 10px 0px #3B1D0B;
 }
 
 footer {
@@ -588,7 +604,7 @@ footer .nav__link:hover {
     width: 100%;
   }
   h2 {
-    color: black;
+    color: #3B1D0B;
     text-align: center;
   }
   footer .nav {
