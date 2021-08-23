@@ -4,7 +4,7 @@ function main() {
   getArticles();
 }
 
-// Récupérer les articles depuis l'API
+/*récupération de l'API*/
 function getArticles() {
   fetch("http://localhost:3000/api/teddies")
     .then(function (res) {
@@ -18,7 +18,7 @@ function getArticles() {
       productsContainer.style.padding = "30vh 0";
     })
 
-    // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
+/*basculer les données dans le DOM*/
     .then(function (resultatAPI) {
       const articles = resultatAPI;
       console.log(articles);
@@ -52,8 +52,7 @@ function getArticles() {
         let productInfoPrice = document.createElement("div");
         productInfosDiv.appendChild(productInfoPrice);
         productInfoPrice.classList.add("product__infos__price");
-
-        /*Prix en euros*/
+/*transformer le prix en €*/
         resultatAPI[article].price = resultatAPI[article].price / 100;
         productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
           style: "currency",

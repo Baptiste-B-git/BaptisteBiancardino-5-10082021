@@ -56,13 +56,14 @@
   display: flex;
 }
 
-/*contact et panier*/
+/*end contact et panier*/
 body {
   font-family: "arlrdbd";
   margin: 0;
   padding: 0;
 }
 
+/*header*/
 h1 {
   font-family: "bauhaus-93";
 }
@@ -150,6 +151,8 @@ a {
   height: auto;
 }
 
+/*end header*/
+/*main*/
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,6 +484,8 @@ a {
           box-shadow: 0px 0px 10px 0px #3B1D0B;
 }
 
+/*mnd Main*/
+/*footer*/
 footer {
   position: absolute;
   bottom: 0;
@@ -544,6 +549,8 @@ footer .nav__link:hover {
   transition: 0.3s ease;
 }
 
+/*end Footer*/
+/*responsive*/
 @media screen and (max-width: 530px) {
   .cart-card {
     height: 750px;
@@ -592,4 +599,6 @@ footer .nav__link:hover {
     font-size: 20px;
   }
 }
+
+/*end responsive*/
 /*# sourceMappingURL=cart.css.map */

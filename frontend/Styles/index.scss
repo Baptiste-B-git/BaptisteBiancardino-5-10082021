@@ -51,7 +51,7 @@ $text-color: #FFFFFF;
 .link {
   display: flex;
 }
-/*End contact et panier*/
+/*end contact et panier*/
 
 body {
   font-family: "arlrdbd";
@@ -116,9 +116,9 @@ h1 {
     }
   }
 }
-/*End header*/
+/*end header*/
 
-/*Main*/
+/*main*/
 main {
   .products-container {
     @include flex-center;
@@ -216,7 +216,7 @@ main {
     opacity: 1;
   }
 }
-/*End Main*/
+/*end main*/
   
 /*footer*/
 footer {
@@ -260,9 +260,9 @@ footer {
     transition: 0.3s ease;
   }
 }
-/*End footer*/
+/*end footer*/
 
-/*Responsive*/
+/*responsive*/
 @media screen and (max-width: 1100px) {
   main {
     .products-container {
@@ -300,4 +300,4 @@ footer {
     }
   }
 }
-
+/*end responsive*/

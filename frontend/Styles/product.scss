@@ -22,7 +22,7 @@ $text-color: #FFFFFF;
   src: url('../fonts/bauhaus-93.ttf');
 }
 
-//contact et panier
+/*contact et panier*/
 .links, .cart-header{
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ $text-color: #FFFFFF;
 .link {
   display: flex;
 }
-//contact et panier
+/*end contact et panier*/
 
 body {
   font-family: "arlrdbd";
@@ -118,6 +118,7 @@ h1 {
   }
 }
 
+/*main*/
 .container {
   @include flex-center;
 
@@ -221,14 +222,15 @@ h1 {
 }
 }
 
-
 #bearNum {
   width: 50px;
 }
+/*end main*/
 
+/*footer*/
 footer {
   background: $primary-color;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   @include flex-center;
   width: 100%;
@@ -255,24 +257,24 @@ footer {
   &:hover{
     background: $secondary-color;
   }
-  }
-  .res-sociaux a {
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    color: $primary-color;
-  }
-  .fab, .far {
-    font-size: 25px;
-    &:hover{
-      transform: scale(1.15, 1.15);
-      transition: 0.3s ease;
+}
+.res-sociaux a {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  color: $primary-color;
+}
+.fab, .far {
+  font-size: 25px;
+  &:hover{
+    transform: scale(1.15, 1.15);
+    transition: 0.3s ease;
       
-    }
   }
+}
+/*end footer*/
 
-
-// Responsive
+/*responsive*/
 @media screen and (max-width: 600px) {
   footer {
     .nav {
@@ -283,7 +285,6 @@ footer {
     }
   }
 }
-
 @media screen and (max-width: 450px) {
   .container {
     .product-card {
@@ -298,3 +299,4 @@ footer {
     }
   }
 }
+/*end responsive*/

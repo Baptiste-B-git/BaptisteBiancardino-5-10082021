@@ -16,6 +16,7 @@
   src: url("../fonts/bauhaus-93.ttf");
 }
 
+/*contact et panier*/
 .links, .cart-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,6 +56,7 @@
   display: flex;
 }
 
+/*end contact et panier*/
 body {
   font-family: "arlrdbd";
   margin: 0;
@@ -148,6 +150,7 @@ h1 {
   height: auto;
 }
 
+/*main*/
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -308,9 +311,11 @@ h1 {
   width: 50px;
 }
 
+/*end main*/
+/*footer*/
 footer {
   background: #3B1D0B;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,6 +376,8 @@ footer .nav__link:hover {
   transition: 0.3s ease;
 }
 
+/*end footer*/
+/*responsive*/
 @media screen and (max-width: 600px) {
   footer .nav {
     width: 90%;
@@ -391,4 +398,6 @@ footer .nav__link:hover {
     margin: 5px 0;
   }
 }
+
+/*end responsive*/
 /*# sourceMappingURL=product.css.map */
