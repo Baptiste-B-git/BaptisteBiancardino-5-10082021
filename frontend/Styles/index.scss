@@ -264,6 +264,23 @@ footer {
 
 /*responsive*/
 @media screen and (max-width: 1100px) {
+    .container-top{
+      height: 180px;
+        }
+        &.nav{
+          flex-direction: column;
+        }
+        .cart-header{
+          margin-right: 0;
+        }
+        footer{
+          height: 180px;
+          .nav{
+            margin-top:10px;
+            margin-bottom: 10px;
+          }
+        }
+
   main {
     .products-container {
       .products {

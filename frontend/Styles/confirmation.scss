@@ -204,9 +204,21 @@ footer {
 
 /*responsive*/
 @media screen and (max-width: 530px) {
+  .container-top{
+    height: 180px;
+      }
+      &.nav{
+        flex-direction: column;
+      }
+      .cart-header{
+        margin-right: 0;
+      }
+  
   footer {
+    height: 150px;
     .nav {
-      width: 90%;
+      margin-top:10px;
+      margin-bottom: 10px;
       &__link {
         font-size: 20px;
       }

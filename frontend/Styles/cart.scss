@@ -315,12 +315,10 @@ a {
   }
   }
 }
-/*mnd Main*/
+/*end Main*/
 
 /*footer*/
 footer {
-  position: absolute;
-  bottom: 0;
   background: $primary-color;
   @include flex-center;
   width: 100%;
@@ -364,11 +362,30 @@ footer {
 /*end Footer*/
 
 /*responsive*/
+@media screen and (max-width: 800px) {
+  .container-top{
+    height: 180px;
+  }
+  &.nav{
+    flex-direction: column;
+  }
+  .cart-header{
+  margin-right: 0;
+  }
+  footer{
+  height: 150px;
+    .nav{
+      margin-top:10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
 @media screen and (max-width: 530px) {
   .cart-card {
     height: 750px;
   }
-
   .data-bin {
     display: none;
   }

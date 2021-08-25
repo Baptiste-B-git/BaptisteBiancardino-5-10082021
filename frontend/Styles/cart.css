@@ -484,11 +484,9 @@ a {
           box-shadow: 0px 0px 10px 0px #3B1D0B;
 }
 
-/*mnd Main*/
+/*end Main*/
 /*footer*/
 footer {
-  position: absolute;
-  bottom: 0;
   background: #3B1D0B;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,6 +549,28 @@ footer .nav__link:hover {
 
 /*end Footer*/
 /*responsive*/
+@media screen and (max-width: 800px) {
+  .container-top {
+    height: 180px;
+  }
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cart-header {
+    margin-right: 0;
+  }
+  footer {
+    height: 150px;
+  }
+  footer .nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 530px) {
   .cart-card {
     height: 750px;

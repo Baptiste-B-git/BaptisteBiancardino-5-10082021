@@ -271,8 +271,24 @@ footer .nav__link:hover {
 /*end footer*/
 /*responsive*/
 @media screen and (max-width: 530px) {
+  .container-top {
+    height: 180px;
+  }
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cart-header {
+    margin-right: 0;
+  }
+  footer {
+    height: 150px;
+  }
   footer .nav {
-    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   footer .nav__link {
     font-size: 20px;
