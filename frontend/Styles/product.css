@@ -166,6 +166,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 600px;
   border-radius: 20px 20px 20px 20px;
   -webkit-animation: fadein 1.5s ease-in-out;
           animation: fadein 1.5s ease-in-out;

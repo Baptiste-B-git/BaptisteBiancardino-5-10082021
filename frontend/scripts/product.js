@@ -1,3 +1,21 @@
+class product{
+  constructor(name, description, price, imageUrl, colors){
+  this.name = name;
+  this.description = description;
+  this.price = price;
+  this.imageUrl = imageUrl;
+  this.colors = colors
+  }
+}
+
+let objetProduct = new product(
+  product.name,
+  product.description,
+  product.price,
+  product.imageUrl
+);
+
+// toutes tes fonctions viennent ici
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
 
@@ -14,7 +32,7 @@ main();
 
 function main() {
   checkIf404();
-  getArticles();
+  getArticle();
   addToCart();
 }
 
@@ -32,7 +50,7 @@ function checkIf404() {
 }
 
 /*récupération du produit souhaité par la requête*/
-function getArticles() {
+function getArticle() {
   fetch(`http://localhost:3000/api/teddies/${id}`)
     .then(function (response) {
       return response.json();
@@ -45,24 +63,25 @@ function getArticles() {
       container.style.padding = "45vh 0";
     })
     .then(function (resultatAPI) {
+
       /*repositionner les données de l'API dans la page*/
-      article = resultatAPI;
-      productCardName.innerHTML = article.name;
-      productCardImg.src = article.imageUrl;
-      productCardDescription.innerText = article.description;
+      myProduct = new product(resultatAPI.name, resultatAPI.description, resultatAPI.price, resultatAPI.imageUrl, resultatAPI.colors)
+      productCardName.innerHTML = myProduct.name;
+      productCardImg.src = myProduct.imageUrl;
+      productCardDescription.innerText = myProduct.description;
+
 
       /*afficher le prix en €*/
-      article.price = article.price / 100;
       productCardPrice.innerText = new Intl.NumberFormat("fr-FR", {
         style: "currency",
         currency: "EUR",
-      }).format(article.price);
+      }).format(myProduct.price / 100);
 
       let colorSelect = document.getElementById("color-select");
-      for (let i = 0; i < article.colors.length; i++) {
-        let option = document.createElement("option");
-        option.innerText = article.colors[i];
-        colorSelect.appendChild(option);
+      for (let i = 0; i < myProduct.colors.length; i++) {
+        let option = document.createElement("option")
+        option.innerText = myProduct.colors[i]
+        colorSelect.appendChild(option)
       }
     });
 }
