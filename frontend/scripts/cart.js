@@ -109,7 +109,7 @@ function checkFormAndPostRequest() {
   let inputPhone = document.querySelector("#phone");
   let erreur = document.querySelector(".erreur");
 
-  /*au clic, si les champs ne sont remplis > erreur et on empêche l'envoi auformulaire > vérificaiton que le numéro est un nombre > sinon même procédure*/
+  /*au clic, si les champs ne sont remplis > erreur et on empêche l'envoi au formulaire > vérification que le numéro est un nombre > sinon même procédure*/
   submit.addEventListener("click", (e) => {
     if (
       !inputName.value ||
@@ -122,10 +122,13 @@ function checkFormAndPostRequest() {
     ) {
       erreur.innerHTML = "Vous devez renseigner tous les champs !";
       e.preventDefault();
-    } else if (isNaN(inputPhone.value)) {
+    }
+    else if (isNaN(inputPhone.value)) {
       e.preventDefault();
       erreur.innerText = "Votre numéro de téléphone n'est pas valide";
-    } else {
+    } 
+
+    else {
 
       /*Si formulaire est valide alors > le tableau productsBought contiendra un tableau des produits acheté et order contiendra le tableau avec l'objet qui contient les coordonées de l'acheteur*/
       let productsBought = [];

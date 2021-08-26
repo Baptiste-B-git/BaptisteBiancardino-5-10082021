@@ -52,7 +52,7 @@ function getArticles() {
         let productInfoPrice = document.createElement("div");
         productInfosDiv.appendChild(productInfoPrice);
         productInfoPrice.classList.add("product__infos__price");
-/*transformer le prix en €*/
+        /*transformer le prix en €*/
         resultatAPI[article].price = resultatAPI[article].price / 100;
         productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
           style: "currency",

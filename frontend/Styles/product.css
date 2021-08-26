@@ -321,6 +321,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  bottom: 0;
+  position: absolute;
   background: #3B1D0B;
   width: 100%;
   height: 100px;
@@ -411,6 +413,7 @@ footer .nav__link:hover {
   }
   footer {
     height: 150px;
+    position: relative;
   }
   footer .nav {
     margin-top: 10px;

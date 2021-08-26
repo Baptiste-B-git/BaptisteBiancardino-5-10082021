@@ -1,21 +1,3 @@
-class product{
-  constructor(name, description, price, imageUrl, colors){
-  this.name = name;
-  this.description = description;
-  this.price = price;
-  this.imageUrl = imageUrl;
-  this.colors = colors
-  }
-}
-
-let objetProduct = new product(
-  product.name,
-  product.description,
-  product.price,
-  product.imageUrl
-);
-
-// toutes tes fonctions viennent ici
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
 
@@ -36,6 +18,24 @@ function main() {
   addToCart();
 }
 
+class product{
+  constructor(name, description, price, imageUrl, colors){
+  this.name = name;
+  this.description = description;
+  this.price = price;
+  this.imageUrl = imageUrl;
+  this.colors = colors
+  }
+}
+
+let objetProduct = new product(
+  product.name,
+  product.description,
+  product.price,
+  product.imageUrl
+);
+
+// toutes mes fonctions viennent ici
 function checkIf404() {
   window.addEventListener("error", (e) => {
       let container = document.querySelector(".container");

@@ -323,6 +323,8 @@ footer {
   @include flex-center;
   width: 100%;
   height: 100px;
+  bottom: 0;
+  position: absolute;
   .nav {
     max-width: 1700px;
     color: $text-color;
@@ -362,7 +364,7 @@ footer {
 /*end Footer*/
 
 /*responsive*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
   .container-top{
     height: 180px;
   }
@@ -374,6 +376,7 @@ footer {
   }
   footer{
   height: 150px;
+  position: relative;
     .nav{
       margin-top:10px;
       margin-bottom: 10px;
