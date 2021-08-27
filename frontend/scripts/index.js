@@ -4,24 +4,6 @@ function main() {
   getArticles();
 }
 
-// création de la class product
-class product{
-  constructor(name, price, imageUrl, id){
-  this.name = name;
-  this.price = price;
-  this.imageUrl = imageUrl;
-  this.id = id
-  }
-}
-
-// créer un nouveau product
-let objetProduct = new product(
-  product.name,
-  product.price,
-  product.imageUrl,
-  product.id,
-);
-
 /*récupération de l'API*/
 function getArticles() {
   fetch("http://localhost:3000/api/teddies")
@@ -38,16 +20,22 @@ function getArticles() {
 
 /*basculer les données dans le DOM*/
     .then(function (resultatAPI) {
-      myProduct = new product(resultatAPI.name, resultatAPI.price, resultatAPI.imageUrl, resultatAPI.id)
+      
       const articles = resultatAPI;
+
       for (let article in articles) {
+
+        myProduct = new product(resultatAPI[article].name, resultatAPI[article].price, resultatAPI[article].imageUrl, resultatAPI[article].id)
+
+        console.log(resultatAPI[article].name)
+
         let productCard = document.createElement("div");
         document.querySelector(".products").appendChild(productCard);
         productCard.classList.add("product");
 
         let productLink = document.createElement("a");
         productCard.appendChild(productLink);
-        productLink.href = `product.html?id=${resultatAPI[article]._id}`;
+        productLink.href = `product.html?id=${myProduct._id}`;
         productLink.classList.add("stretched-link");
 
         let productImgDiv = document.createElement("div");
@@ -56,7 +44,7 @@ function getArticles() {
 
         let productImg = document.createElement("img");
         productImgDiv.appendChild(productImg);
-        productImg.src = resultatAPI[article].imageUrl;
+        productImg.src = myProduct.imageUrl;
 
         let productInfosDiv = document.createElement("div");
         productLink.appendChild(productInfosDiv);
@@ -71,11 +59,11 @@ function getArticles() {
         productInfosDiv.appendChild(productInfoPrice);
         productInfoPrice.classList.add("product__infos__price");
         /*transformer le prix en €*/
-        resultatAPI[article].price = resultatAPI[article].price / 100;
+        myProduct.price  = myProduct.price / 100;
         productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
           style: "currency",
           currency: "EUR",
-        }).format(resultatAPI[article].price);
+        }).format(myProduct.price);
       }
     });
 }

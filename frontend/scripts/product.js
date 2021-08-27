@@ -18,23 +18,6 @@ function main() {
   addToCart();
 }
 
-class product{
-  constructor(name, description, price, imageUrl, colors){
-  this.name = name;
-  this.description = description;
-  this.price = price;
-  this.imageUrl = imageUrl;
-  this.colors = colors
-  }
-}
-
-// créer un nouveau produit
-let objetProduct = new product(
-  product.name,
-  product.description,
-  product.price,
-  product.imageUrl
-);
 
 // toutes mes fonctions viennent ici
 function checkIf404() {
@@ -65,7 +48,7 @@ function getArticle() {
     })
     .then(function (resultatAPI) {
       /*repositionner les données de l'API dans la page*/
-      myProduct = new product(resultatAPI.name, resultatAPI.description, resultatAPI.price, resultatAPI.imageUrl, resultatAPI.colors)
+      myProduct = new productId(resultatAPI.name, resultatAPI.description, resultatAPI.price, resultatAPI.imageUrl, resultatAPI.colors)
       productCardName.innerHTML = myProduct.name;
       productCardImg.src = myProduct.imageUrl;
       productCardDescription.innerText = myProduct.description;
@@ -124,3 +107,6 @@ function addToCart() {
     }
   });
 }
+
+  
+  
