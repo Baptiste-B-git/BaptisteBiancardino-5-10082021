@@ -4,6 +4,24 @@ function main() {
   getArticles();
 }
 
+// création de la class product
+class product{
+  constructor(name, price, imageUrl, id){
+  this.name = name;
+  this.price = price;
+  this.imageUrl = imageUrl;
+  this.id = id
+  }
+}
+
+// créer un nouveau product
+let objetProduct = new product(
+  product.name,
+  product.price,
+  product.imageUrl,
+  product.id,
+);
+
 /*récupération de l'API*/
 function getArticles() {
   fetch("http://localhost:3000/api/teddies")
@@ -20,8 +38,8 @@ function getArticles() {
 
 /*basculer les données dans le DOM*/
     .then(function (resultatAPI) {
+      myProduct = new product(resultatAPI.name, resultatAPI.price, resultatAPI.imageUrl, resultatAPI.id)
       const articles = resultatAPI;
-      console.log(articles);
       for (let article in articles) {
         let productCard = document.createElement("div");
         document.querySelector(".products").appendChild(productCard);
@@ -47,7 +65,7 @@ function getArticles() {
         let productInfoTitle = document.createElement("div");
         productInfosDiv.appendChild(productInfoTitle);
         productInfoTitle.classList.add("product__infos__title");
-        productInfoTitle.innerHTML = resultatAPI[article].name;
+        productInfoTitle.innerHTML = myProduct.name;
 
         let productInfoPrice = document.createElement("div");
         productInfosDiv.appendChild(productInfoPrice);

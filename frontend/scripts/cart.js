@@ -87,9 +87,8 @@ function countTotalInCart() {
   ).format(arrayOfPrice))}`;
 }
 
-function toEmptyCart() {
-
   /*vider le panier ainsi que le LS*/
+function toEmptyCart() {
   const buttonToEmptyCart = document.querySelector(".to-empty-cart");
   buttonToEmptyCart.addEventListener("click", () => {
     localStorage.clear();
@@ -97,7 +96,6 @@ function toEmptyCart() {
 }
 
 function checkFormAndPostRequest() {
-
   /*récupération des inputs via le DOM*/
   const submit = document.querySelector("#submit");
   let inputName = document.querySelector("#name");
