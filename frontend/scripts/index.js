@@ -11,59 +11,54 @@ function getArticles() {
       return res.json();
     })
     .catch((error) => {
-      var productsContainer = document.querySelector(".products-container");
+      let productsContainer = document.querySelector(".products-container");
       productsContainer.innerHTML =
-        "Veuillez lancer le serveur local Port 3000";
+        "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
       productsContainer.style.textAlign = "center";
       productsContainer.style.padding = "30vh 0";
     })
 
 /*basculer les données dans le DOM*/
-    .then(function (resultatAPI) {
-      
-      const articles = resultatAPI;
+.then(function (resultatAPI) {
+  const articles = resultatAPI;
+  console.log(articles);
+  for (let article in articles) {
+    let productCard = document.createElement("div");
+    document.querySelector(".products").appendChild(productCard);
+    productCard.classList.add("product");
 
-      for (let article in articles) {
+    let productLink = document.createElement("a");
+    productCard.appendChild(productLink);
+    productLink.href = `product.html?id=${resultatAPI[article]._id}`;
+    productLink.classList.add("stretched-link");
 
-        myProduct = new product(resultatAPI[article].name, resultatAPI[article].price, resultatAPI[article].imageUrl, resultatAPI[article].id)
+    let productImgDiv = document.createElement("div");
+    productLink.appendChild(productImgDiv);
+    productImgDiv.classList.add("product__img");
 
-        console.log(resultatAPI[article].name)
+    let productImg = document.createElement("img");
+    productImgDiv.appendChild(productImg);
+    productImg.src = resultatAPI[article].imageUrl;
 
-        let productCard = document.createElement("div");
-        document.querySelector(".products").appendChild(productCard);
-        productCard.classList.add("product");
+    let productInfosDiv = document.createElement("div");
+    productLink.appendChild(productInfosDiv);
+    productInfosDiv.classList.add("product__infos");
 
-        let productLink = document.createElement("a");
-        productCard.appendChild(productLink);
-        productLink.href = `product.html?id=${myProduct._id}`;
-        productLink.classList.add("stretched-link");
+    let productInfoTitle = document.createElement("div");
+    productInfosDiv.appendChild(productInfoTitle);
+    productInfoTitle.classList.add("product__infos__title");
+    productInfoTitle.innerHTML = resultatAPI[article].name;
 
-        let productImgDiv = document.createElement("div");
-        productLink.appendChild(productImgDiv);
-        productImgDiv.classList.add("product__img");
+    let productInfoPrice = document.createElement("div");
+    productInfosDiv.appendChild(productInfoPrice);
+    productInfoPrice.classList.add("product__infos__price");
 
-        let productImg = document.createElement("img");
-        productImgDiv.appendChild(productImg);
-        productImg.src = myProduct.imageUrl;
-
-        let productInfosDiv = document.createElement("div");
-        productLink.appendChild(productInfosDiv);
-        productInfosDiv.classList.add("product__infos");
-
-        let productInfoTitle = document.createElement("div");
-        productInfosDiv.appendChild(productInfoTitle);
-        productInfoTitle.classList.add("product__infos__title");
-        productInfoTitle.innerHTML = myProduct.name;
-
-        let productInfoPrice = document.createElement("div");
-        productInfosDiv.appendChild(productInfoPrice);
-        productInfoPrice.classList.add("product__infos__price");
-        /*transformer le prix en €*/
-        myProduct.price  = myProduct.price / 100;
-        productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
-          style: "currency",
-          currency: "EUR",
-        }).format(myProduct.price);
-      }
-    });
+    // Formatage du prix pour l'afficher en euros
+    resultatAPI[article].price = resultatAPI[article].price / 100;
+    productInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
+      style: "currency",
+      currency: "EUR",
+    }).format(resultatAPI[article].price);
+  }
+});
 }
