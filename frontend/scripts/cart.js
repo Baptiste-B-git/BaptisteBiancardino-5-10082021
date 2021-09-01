@@ -127,8 +127,7 @@ function checkFormAndPostRequest() {
     } 
 
     else {
-
-      /*Si formulaire est valide alors > le tableau productsBought contiendra un tableau des produits acheté et order contiendra le tableau avec l'objet qui contient les coordonées de l'acheteur*/
+      /*Si formulaire est valide alors > le tableau productsBought contiendra un tableau des produits acheté et order contiendra le tableau avec l'objet qui contient les coordonnées de l'acheteur*/
       let productsBought = [];
       productsBought.push(copyOfLS);
 
